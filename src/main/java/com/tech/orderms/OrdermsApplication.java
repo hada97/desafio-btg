@@ -8,9 +8,9 @@ public class OrdermsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OrdermsApplication.class, args);
-		System.out.println("==============================");
-		System.out.println("==========Executando===========");
-		System.out.println("==============================");
+		System.out.println("===============================");
+		System.out.println("===========Executando==========");
+		System.out.println("===============================");
 	}
 
 }
