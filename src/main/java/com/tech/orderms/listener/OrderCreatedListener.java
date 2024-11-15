@@ -2,6 +2,7 @@ package com.tech.orderms.listener;
 
 
 import com.tech.orderms.listener.dto.OrderCreatedEvent;
+import com.tech.orderms.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -24,7 +25,6 @@ public class OrderCreatedListener {
     @RabbitListener(queues = ORDER_CREATED_QUEUE)
     public void listen(Message<OrderCreatedEvent> message){
         logger.info("Message consumed: {}", message);
-
         orderService.save(message.getPayload());
     }
 }
